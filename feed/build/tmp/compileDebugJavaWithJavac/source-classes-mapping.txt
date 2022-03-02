@@ -1,0 +1,2 @@
+com/clcmo/lib/BuildConfig.java
+ com.clcmo.lib.BuildConfig
