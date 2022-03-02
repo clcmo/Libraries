@@ -38,23 +38,30 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':lib')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(path: ':feed')
 
+    // Set root Dependencies
     def dependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependencies
 
     //App Implementations
-    implementation dependencies.appCompat
-    implementation dependencies.constraintLayout
-    implementation dependencies.material
-
+    implementation dependencies.recyclerView
+    implementation dependencies.support
+    implementation dependencies.glide
+    implementation dependencies.gson
+    implementation dependencies.otto
     implementation dependencies.ktx
 
     //Test Implementations
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.runner
-    androidTestImplementation testDependencies.espresso
+    androidTestImplementation(testDependencies.espresso, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
 
     //Kapt Implementation
     kapt dependencies.dataBinding
+    kapt dependencies.daggerCompile
+    kapt dependencies.daggerProcessor
 }

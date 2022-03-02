@@ -1,4 +1,4 @@
-package com.clcmo.libraries
+package com.clcmo.app
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

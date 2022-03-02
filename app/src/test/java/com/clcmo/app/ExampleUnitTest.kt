@@ -1,4 +1,4 @@
-package com.clcmo.libraries
+package com.clcmo.app
 
 import org.junit.Test
 

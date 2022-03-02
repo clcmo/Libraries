@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Libraries</string>
+    <string name="rss_url">RSS URL</string>
+    <string name="rss_title">RSS Title</string>
+    <string name="default_text">Default Text</string>
+    <string name="refresh">Refresh</string>
+    <string name="settings">Settings</string>
+    <string name="network_setting">Network Setting</string>
 </resources>
